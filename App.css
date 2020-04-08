@@ -1,0 +1,85 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  text-align: center;
+  background: #f8f8f8;
+}
+
+/* NAVBAR */
+.navbar-wrap {
+  background: #E5E8E8;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
+.logo-wrap * {
+  width: 62px;
+  height: 37.132px;
+  padding-top: 20px;
+}
+.logo-wrap {
+  margin: 0;
+  padding-top: 20px;
+  padding-left: 5%;
+  padding-bottom: 20px;
+  text-align: start;
+  font-family: 'Georgia';
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26.1px;
+  color: #001A7D;
+}
+.navbar {
+  position: absolute;
+  font-family: 'Akkurat';
+  font-size: 17px;
+  color: #001A7D;
+  display: block;
+  right: 0;
+  padding: 10px 10px 20px 10px;
+}
+nav {
+  margin: 0 0 1.45rem 1.45rem;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type:none;
+}
+li {
+  float: right;
+  list-style: none;
+  text-transform: capitalize;
+  margin: 1.40rem .9rem 1rem 1rem;
+  letter-spacing: 2px;
+}
+a{
+  text-decoration: none;
+  padding: 10px 10px 20px 10px;  
+  font-family: inherit;
+}
+#link {
+  position: relative;
+}
+#link:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 15px;
+  right: 0;
+  transition: width .5s ease;
+  -webkit-transition: width .5s ease;
+}
+#link:hover:after {
+  width: 100%;
+  left: 0;
+  background: #001A7D;
+}
+
+
