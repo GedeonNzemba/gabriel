@@ -1,7 +1,14 @@
 import React from 'react';
 import './App.css';
 import { Navbar } from './Components/Navbar';
+import { Header } from './Components/Header';
 import { render } from '@testing-library/react';
+
+
+
+
+
+
 
 class App extends React.Component {
   constructor(props) {
@@ -13,7 +20,10 @@ class App extends React.Component {
       Spaces: 'Spaces',
       Vision: 'Vision',
       Contact: 'Contact',
-      // SECTION 1
+      // HEADER
+      Ftitle: 'Web design modern communities',
+      Stitle: 'that advance the wellbeing of young',
+      Ttitle: 'adults',
       SvgA: <svg xmlns="http://www.w3.org/2000/svg" width={106} height="17.18" viewBox="0 0 106 17.18">
         <g id="Group_187" data-name="Group 187" transform="translate(-238.835 -268.125)">
           <g id="Group_186" data-name="Group 186" transform="translate(238.835 268.125)">
@@ -47,30 +57,52 @@ class App extends React.Component {
       </svg>,
       SvgE: <svg className="stylesheet-module--svgBase--1Ic9- stylesheet-module--svgOne--wOE7U" id="Path_401" xmlns="http://www.w3.org/2000/svg" width="558.212" height="567.028" viewBox="0 0 558.212 567.028" transition="inherit">
         <path d="M685.385,476.2S270.043,395.553,198.572,168.08" fill="none" transform="translate(-257.917 386.801) rotate(-47)" strokeWidth={1} style={{ transition: 'stroke-dashoffset 1s ease-in-out 0s', strokeDasharray: '599.477, 599.477', strokeDashoffset: 0 }} />
-      </svg>
+      </svg>,
+      SvgF: <svg className="stylesheet-module--visionHeroSvgTop--sI1UH" xmlns="http://www.w3.org/2000/svg" width="299.425" height="326.69" viewBox="0 0 299.425 326.69">
+              <path id="_1_vision" data-name="1_vision" d="M198.572,168.08s40.441,128.712,275.457,174.347" transform="matrix(0.559, -0.829, 0.829, 0.559, -249.994, 299.161)" fill="none" stroke="#001a7d" strokeMiterlimit={10} strokeWidth="0.5" />
+            </svg>,
+      SvgG: <svg className="stylesheet-module--visionHeroSvgBottom--2Bhad" xmlns="http://www.w3.org/2000/svg" width="521.684" height="89.443" viewBox="0 0 521.684 89.443">
+              <path id="_2_vision" data-name="2_vision" d="M314.016,203.067c93.274-18.737,261.9-25.678,522.313-24.928" transform="translate(-333.22 -74.34) rotate(-7)" fill="none" stroke="#001a7d" strokeMiterlimit={10} strokeWidth="0.5" />
+            </svg>
     }
   }
 
+  
 
   render() {
+    const element = <Navbar 
+    home={this.state.Home}
+    location={this.state.Location}
+    space={this.state.Spaces}
+    vision={this.state.Vision}
+    contact={this.state.Contact}
+    svgD={this.state.SvgD}
+
+  />
+
     return (
       <div className="App">
-        <Navbar 
-          home={this.state.Home}
-          location={this.state.Location}
-          space={this.state.Spaces}
-          vision={this.state.Vision}
-          contact={this.state.Contact}
+        <Header 
+          Ngbar={element}
+          Ftitle={this.state.Ftitle}
+          Stitle={this.state.Stitle}
+          Ttitle={this.state.Ttitle}
           svgA={this.state.SvgA}
           svgB={this.state.SvgB}
           svgC={this.state.SvgC}
-          svgD={this.state.SvgD}
           svgE={this.state.SvgE}
+          svgD={this.state.SvgD}
+          svgF={this.state.SvgF}
+          svgG={this.state.SvgG}
         />
-
+          
+        
       </div>
     );
   }
 }
 
+
 export default App;
+
+
